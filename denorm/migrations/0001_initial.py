@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='DirtyInstance',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('object_id', models.TextField(null=True, blank=True)),
+                ('object_id', models.TextField(null=True, blank=True, max_length=32)),
                 ('content_type', models.ForeignKey(to='contenttypes.ContentType')),
             ],
         ),
